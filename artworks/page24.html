@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../style.css">
+<title>Display JSON Data</title>
+</head>
+<body>
+    <img class = "pageslogo" src = "../branding/logo.png">
+
+    <!-- Button to go back home -->
+    <div class = "backHome">
+        <a href = "../index.html">
+            <p class = "backHomeText">← Explore other works</p>
+        </a>
+    </div>
+
+    <div class = 'artistInfo'>
+        <h1 style = "display: inline" id="title"></h1>
+        <br><br>
+        <h3 style = "display: inline">By</h3>
+        <h3 style = "display: inline" id = "firstName"></h3>
+        <h3 style = "display: inline" id = "lastName"></h3>
+
+
+        <br><br><br>
+        <p style = "display: inline"> Program: </p>
+        <p style = "display: inline" id = "program"></p>
+        <br><br>
+        <p style = "display: inline;"> Course: </p>
+        <p style = "display: inline" id = "course"></p>
+
+        <br><br><br>
+        <p style = "font-style: italic;"> Description: </p>
+        <p style = "display: inline; font-size: 18px; line-height: 25px;" id = "description"></p>
+
+        
+
+    </div>
+
+    <script>
+        // Fetch data from the JSON endpoint
+        fetch('https://api.npoint.io/6119a06ae415fca3c448')
+        .then(response => response.json()) // Parse JSON response
+        .then(data => {
+            
+            // TITLE
+            var titleContainer = document.getElementById("title");
+            titleContainer.textContent = data[24].title; 
+
+            // NAME
+            var firstNameContainer = document.getElementById("firstName");
+            firstNameContainer.textContent = data[24].firstName; 
+
+            var lastNameContainer = document.getElementById("lastName");
+            lastNameContainer.textContent = data[24].lastName; 
+
+            // PROGRAM
+            var programContainer = document.getElementById("program");
+            programContainer.textContent = data[24].program; 
+
+            // COURSE
+            var courseContainer = document.getElementById("course");
+            courseContainer.textContent = data[24].course; 
+
+            // DESCRIPTION
+            var descriptionText = data[24].description; // Retrieve the description text
+            var descriptionParagraphs = descriptionText.split("|"); // Split the text into paragraphs based on "|"
+
+            // Create an empty string to store the HTML code for paragraphs
+            var descriptionHTML = "";
+
+            // Iterate over each paragraph and wrap it in <p> tags
+            descriptionParagraphs.forEach(function (paragraph) {
+            // Append the paragraph wrapped in <p> tags to the descriptionHTML string
+            descriptionHTML += "<p>" + paragraph + "</p>";
+            });
+
+            // Update the HTML content of the description paragraph element with the paragraphs HTML
+            document.getElementById("description").innerHTML = descriptionHTML;
+        })
+        .catch(error => console.error('Error fetching data:', error));
+    </script>
+</body>
+</html>

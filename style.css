@@ -1,0 +1,86 @@
+body{
+    background-color: rgb(24, 24, 24);
+    margin: 25px;
+    font-family: Helvetica, sans-serif;
+}
+
+p{
+    color: white;   
+}
+
+h1, h2, h3, h4{
+    color: white;   
+}
+
+.mainDesc{
+    max-width: 90%;
+}
+
+.logo{
+    max-width: 50%;
+    text-align: center;
+    filter: invert(1);
+}
+
+.pageslogo{
+    max-width: 25%;
+    filter: invert(1);
+    display: block;
+    margin: 0 auto;
+}
+
+#rectangleContainer {
+    margin-top: 30px;
+    /* display: flex; */
+    justify-content: center; /* Align items horizontally to the center */
+    align-items: center; /* Align items vertically to the center */
+    /* width: 100%; Set container height to full viewport height */
+}
+
+.rectangle{
+    width: 71px;
+    height: 71px;
+    background-color: rgb(220, 220, 220);
+    /* border: 1px solid #aaa; */
+    border-radius: 5px;
+    display: inline-block;
+    margin: 5px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 71px;
+}
+
+.rectangle:hover{
+    background-color: rgb(255, 111, 111)
+}
+
+.rectangleText{
+    color: red;
+}
+
+.backHomeText{
+    color: rgb(72, 72, 72);
+    text-align: center;
+    line-height: 30px;
+    font-style: italic;
+    font-size: 14px;
+}
+
+.backHome:hover{
+    font-style: normal;
+}
+
+.backHome{
+    margin-top: 20px;
+    height: 30px;
+    width: 180px;
+    background-color: rgb(218, 218, 218);
+    border-radius: 30px;
+    margin-bottom: 40px;
+}
+
+
+
+.artistInfo{
+    margin-top: 30px;
+}
