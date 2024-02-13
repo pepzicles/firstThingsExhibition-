@@ -1,4 +1,4 @@
-let numRectangles = 190;
+let numRectangles = 196;
 
 let rectangleContainer = document.getElementById('rectangleContainer');
 

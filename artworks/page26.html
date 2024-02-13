@@ -22,6 +22,8 @@
         <h3 style = "display: inline">By</h3>
         <h3 style = "display: inline" id = "firstName"></h3>
         <h3 style = "display: inline" id = "lastName"></h3>
+        <h3 style = "display: inline">, </h3>
+        <h3 style = "display: inline" id = "collaborators"></h3>
 
 
         <br><br><br>
@@ -47,25 +49,29 @@
             
             // TITLE
             var titleContainer = document.getElementById("title");
-            titleContainer.textContent = data[26].title; 
+            titleContainer.textContent = data[27].title; 
 
             // NAME
             var firstNameContainer = document.getElementById("firstName");
-            firstNameContainer.textContent = data[26].firstName; 
+            firstNameContainer.textContent = data[27].firstName; 
 
             var lastNameContainer = document.getElementById("lastName");
-            lastNameContainer.textContent = data[26].lastName; 
+            lastNameContainer.textContent = data[27].lastName; 
+
+            // COLLABORATOR
+            var collaboratorsContainer = document.getElementById("collaborators");
+            collaboratorsContainer.textContent = data[27].collaborators;
 
             // PROGRAM
             var programContainer = document.getElementById("program");
-            programContainer.textContent = data[26].program; 
+            programContainer.textContent = data[27].program; 
 
             // COURSE
             var courseContainer = document.getElementById("course");
-            courseContainer.textContent = data[26].course; 
+            courseContainer.textContent = data[27].course; 
 
             // DESCRIPTION
-            var descriptionText = data[26].description; // Retrieve the description text
+            var descriptionText = data[27].description; // Retrieve the description text
             var descriptionParagraphs = descriptionText.split("|"); // Split the text into paragraphs based on "|"
 
             // Create an empty string to store the HTML code for paragraphs

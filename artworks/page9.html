@@ -41,31 +41,31 @@
 
     <script>
         // Fetch data from the JSON endpoint
-        fetch('https://api.npoint.io/6119a06ae415fca3c448')
+        fetch('https://api.npoint.io/61110a06ae415fca3c448')
         .then(response => response.json()) // Parse JSON response
         .then(data => {
             
             // TITLE
             var titleContainer = document.getElementById("title");
-            titleContainer.textContent = data[9].title; 
+            titleContainer.textContent = data[10].title; 
 
             // NAME
             var firstNameContainer = document.getElementById("firstName");
-            firstNameContainer.textContent = data[9].firstName; 
+            firstNameContainer.textContent = data[10].firstName; 
 
             var lastNameContainer = document.getElementById("lastName");
-            lastNameContainer.textContent = data[9].lastName; 
+            lastNameContainer.textContent = data[10].lastName; 
 
             // PROGRAM
             var programContainer = document.getElementById("program");
-            programContainer.textContent = data[9].program; 
+            programContainer.textContent = data[10].program; 
 
             // COURSE
             var courseContainer = document.getElementById("course");
-            courseContainer.textContent = data[9].course; 
+            courseContainer.textContent = data[10].course; 
 
             // DESCRIPTION
-            var descriptionText = data[9].description; // Retrieve the description text
+            var descriptionText = data[10].description; // Retrieve the description text
             var descriptionParagraphs = descriptionText.split("|"); // Split the text into paragraphs based on "|"
 
             // Create an empty string to store the HTML code for paragraphs

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+<meta charset="UTF-9">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="../style.css">
 <title>Display JSON Data</title>
@@ -33,38 +33,38 @@
 
         <br><br><br>
         <p style = "font-style: italic;"> Description: </p>
-        <p style = "display: inline; font-size: 18px; line-height: 25px;" id = "description"></p>
+        <p style = "display: inline; font-size: 19px; line-height: 25px;" id = "description"></p>
         
 
     </div>
 
     <script>
         // Fetch data from the JSON endpoint
-        fetch('https://api.npoint.io/6119a06ae415fca3c448')
+        fetch('https://api.npoint.io/6119a06ae415fca3c449')
         .then(response => response.json()) // Parse JSON response
         .then(data => {
             
             // TITLE
             var titleContainer = document.getElementById("title");
-            titleContainer.textContent = data[8].title; 
+            titleContainer.textContent = data[9].title; 
 
             // NAME
             var firstNameContainer = document.getElementById("firstName");
-            firstNameContainer.textContent = data[8].firstName; 
+            firstNameContainer.textContent = data[9].firstName; 
 
             var lastNameContainer = document.getElementById("lastName");
-            lastNameContainer.textContent = data[8].lastName; 
+            lastNameContainer.textContent = data[9].lastName; 
 
             // PROGRAM
             var programContainer = document.getElementById("program");
-            programContainer.textContent = data[8].program; 
+            programContainer.textContent = data[9].program; 
 
             // COURSE
             var courseContainer = document.getElementById("course");
-            courseContainer.textContent = data[8].course; 
+            courseContainer.textContent = data[9].course; 
 
             // DESCRIPTION
-            var descriptionText = data[8].description; // Retrieve the description text
+            var descriptionText = data[9].description; // Retrieve the description text
             var descriptionParagraphs = descriptionText.split("|"); // Split the text into paragraphs based on "|"
 
             // Create an empty string to store the HTML code for paragraphs
