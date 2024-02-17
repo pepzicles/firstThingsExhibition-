@@ -12,8 +12,36 @@ h1, h2, h3, h4{
     color: white;   
 }
 
+.mapIcon{
+    width: 30px;
+    margin-top: 5px;
+    display: inline-block;
+}
+
+.mapsButtonText{
+    display: inline-block;
+    transform: translate(0px, -5px);
+    font-weight: bold;;
+}
+
+.mapsButton{
+    color: white;
+    height: 40px;
+    width: 200px;
+    /* border: 1px solid #aaa; */
+    border-radius: 30px;
+    border-color: color;
+    border-style: solid;
+    display: inline-block;
+    margin: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    text-align: center;
+}
+
 .mainDesc{
     max-width: 90%;
+    font-size: 18px;
 }
 
 .logo{
@@ -59,11 +87,14 @@ h1, h2, h3, h4{
 }
 
 .backHomeText{
-    color: rgb(72, 72, 72);
+    color: rgb(255, 255, 255);
     text-align: center;
-    line-height: 30px;
+    /* line-height: 30px; */
+    font-weight: bold;
     font-style: italic;
-    font-size: 14px;
+    font-size: 15px;
+    margin-top: 13px;
+    color: black;
 }
 
 .backHome:hover{
@@ -72,15 +103,33 @@ h1, h2, h3, h4{
 
 .backHome{
     margin-top: 20px;
-    height: 30px;
+    height: 45px;
     width: 180px;
-    background-color: rgb(218, 218, 218);
     border-radius: 30px;
     margin-bottom: 40px;
+    border-radius: 30px;
+    border-color: color;
+    border-style: solid;
+    /* color: white; */
+    background-color: rgb(233, 219, 198);
 }
 
 
 
 .artistInfo{
     margin-top: 30px;
+}
+
+.mapImages{
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Expandable images for maps.html */
+.image-container {
+  width: fit-content; /* Adjusts container size based on image size */
+}
+
+.mapImages{
+    margin-bottom: 30px;
 }

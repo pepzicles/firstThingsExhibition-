@@ -13,3 +13,11 @@ for (let i = 0; i < numRectangles; i++){
     })(i);
     rectangleContainer.appendChild(rectangle);
 }
+
+//Making the maps button into an actual button
+function redirectToMaps() {
+        // Redirect to your desired URL when the button is clicked
+        window.location.href = "maps.html";
+}
+    
+
